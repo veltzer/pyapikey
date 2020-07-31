@@ -4,6 +4,14 @@ pyapikey package
 Submodules
 ----------
 
+pyapikey.core module
+--------------------
+
+.. automodule:: pyapikey.core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyapikey.version module
 -----------------------
 
