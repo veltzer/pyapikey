@@ -16,6 +16,8 @@
 ![Downloads](https://pepy.tech/badge/pyapikey/month)
 ![Downloads](https://pepy.tech/badge/pyapikey/week)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pyapikey/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pyapikey?targetFile=requirements.txt)
+
 
 
 access api keys from code

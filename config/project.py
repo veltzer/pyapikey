@@ -1,7 +1,7 @@
 import datetime
+import pyclassifiers.values
 import config.general
 
-import pyclassifiers.values
 
 project_github_username = 'veltzer'
 project_name = 'pyapikey'
