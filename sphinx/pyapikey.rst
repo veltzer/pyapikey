@@ -12,10 +12,10 @@ pyapikey.core module
    :undoc-members:
    :show-inheritance:
 
-pyapikey.version module
------------------------
+pyapikey.static module
+----------------------
 
-.. automodule:: pyapikey.version
+.. automodule:: pyapikey.static
    :members:
    :undoc-members:
    :show-inheritance:
