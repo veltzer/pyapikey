@@ -4,6 +4,7 @@ pypitools
 pydmt
 pyclassifiers
 # test requirements
+pylint
 pytest
 pytest-cov
 flake8

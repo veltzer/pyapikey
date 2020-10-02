@@ -9,6 +9,7 @@ setup_requires = [
 ]
 
 test_requires = [
+    'pylint',
     'pytest',
     'pytest-cov',
     'flake8',
