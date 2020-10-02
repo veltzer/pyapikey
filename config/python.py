@@ -9,6 +9,9 @@ setup_requires = [
 ]
 
 test_requires = [
+    'pytest',
+    'pytest-cov',
+    'flake8',
 ]
 
 install_requires = [

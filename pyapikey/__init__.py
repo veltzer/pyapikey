@@ -1,1 +1,1 @@
-from pyapikey.core import get_key
+from pyapikey.core import get_key # noqa F401

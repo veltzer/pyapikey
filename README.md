@@ -19,6 +19,9 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pyapikey/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pyapikey?targetFile=requirements.txt)
 
 
+Actions
+
+![build](https://github.com/veltzer/pyapikey/workflows/build/badge.svg)
 
 access api keys from code
 
