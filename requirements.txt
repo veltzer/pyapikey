@@ -3,6 +3,7 @@
 pypitools
 pydmt
 pyclassifiers
+pymakehelper
 # test requirements
 pylint
 pytest
