@@ -3,3 +3,7 @@
 pypitools
 pydmt
 pyclassifiers
+# test requirements
+pytest
+pytest-cov
+flake8
