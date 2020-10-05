@@ -25,7 +25,7 @@ Actions
 
 access api keys from code
 
-project website: <https://veltzer.github.io/pyapikey>
+project website: https://veltzer.github.io/pyapikey
 
 chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
