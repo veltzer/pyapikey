@@ -14,7 +14,6 @@
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 ![build](https://github.com/veltzer/pyapikey/workflows/build/badge.svg)
-
 access api keys from code
 
 project website: https://veltzer.github.io/pyapikey
