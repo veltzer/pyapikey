@@ -49,7 +49,6 @@ if str(config.general.general_current_year) == project_year_started:
     project_copyright_years = config.general.general_current_year
 else:
     project_copyright_years = "{0}-{1}".format(project_year_started, config.general.general_current_year)
-# project_data_files.append(templar.utils.hlp_files_under("/usr/bin", "src/*"))
 project_google_analytics_tracking_id = "0"
 project_google_analytics_snipplet = """<script type="text/javascript">
 (function(i,s,o,g,r,a,m){{i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){{
