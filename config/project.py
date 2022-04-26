@@ -24,7 +24,7 @@ project_keywords = [
     "secret",
 ]
 project_license = "MIT"
-project_year_started = "2020"
+project_year_started = 2020
 project_description = project_long_description
 project_platforms = [
     "python3",
