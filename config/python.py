@@ -4,8 +4,11 @@ package_name = config.project.project_name
 
 dev_requires = [
     "pypitools",
-    "pydmt",
+]
+config_requires = [
     "pyclassifiers",
+]
+make_requires = [
     "pymakehelper",
 ]
 test_requires = [
