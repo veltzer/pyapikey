@@ -1,9 +1,6 @@
 # THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
 # dev requirements
 pypitools
-pydmt
-pyclassifiers
-pymakehelper
 # test requirements
 pylint
 pytest
