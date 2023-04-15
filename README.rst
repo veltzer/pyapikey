@@ -12,6 +12,6 @@ project website: https://veltzer.github.io/pyapikey
 
 author: Mark Veltzer
 
-version: 0.0.4
+version: 0.0.5
 
 	Mark Veltzer <mark.veltzer@gmail.com>, Copyright © 2020, 2021, 2022, 2023
