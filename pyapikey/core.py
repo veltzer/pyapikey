@@ -39,6 +39,9 @@ class TempStore:
     def set(self, key: str, value: Any) -> None:
         self.data[key] = value
 
+    def has(self, key: str) -> bool:
+        return key in self.data
+
     def save(self):
         filename = os.path.expanduser("~/.config/pyapikey.temp.json")
         with open(filename, 'w') as file_handle:
