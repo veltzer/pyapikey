@@ -45,4 +45,4 @@ class TempStore:
     def save(self):
         filename = os.path.expanduser("~/.config/pyapikey.temp.json")
         with open(filename, 'w') as file_handle:
-            json.dump(fp=file_handle, obj=self.data, default=default)
+            json.dump(fp=file_handle, obj=self.data, default=default, indent=4)
