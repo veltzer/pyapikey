@@ -27,8 +27,11 @@ def object_hook(obj):
 class TempStore:
     def __init__(self):
         filename = os.path.expanduser("~/.config/pyapikey.temp.json")
-        with open(filename) as file_handle:
-            self.data = json.load(file_handle, object_hook=object_hook)
+        if os.path.isfile(filename):
+            with open(filename) as file_handle:
+                self.data = json.load(file_handle, object_hook=object_hook)
+        else:
+            self.data = {}
 
     def get(self, key: str) -> Any:
         return self.data[key]
