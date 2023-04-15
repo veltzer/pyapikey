@@ -34,8 +34,9 @@
             
   <h1>Source code for pyapikey.core</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
 
 <div class="viewcode-block" id="get_key"><a class="viewcode-back" href="../../pyapikey.html#pyapikey.core.get_key">[docs]</a><span class="k">def</span> <span class="nf">get_key</span><span class="p">(</span><span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -45,11 +46,24 @@
         <span class="k">return</span> <span class="n">keys</span><span class="p">[</span><span class="n">domain</span><span class="p">]</span></div>
 
 
+<div class="viewcode-block" id="default"><a class="viewcode-back" href="../../pyapikey.html#pyapikey.core.default">[docs]</a><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;_isoformat&#39;</span><span class="p">:</span> <span class="n">obj</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()}</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="object_hook"><a class="viewcode-back" href="../../pyapikey.html#pyapikey.core.object_hook">[docs]</a><span class="k">def</span> <span class="nf">object_hook</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="n">_isoformat</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;_isoformat&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">_isoformat</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">_isoformat</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span></div>
+
+
 <div class="viewcode-block" id="TempStore"><a class="viewcode-back" href="../../pyapikey.html#pyapikey.core.TempStore">[docs]</a><span class="k">class</span> <span class="nc">TempStore</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/.config/pyapikey.temp.json&quot;</span><span class="p">)</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_handle</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_handle</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_handle</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">object_hook</span><span class="p">)</span>
 
 <div class="viewcode-block" id="TempStore.get"><a class="viewcode-back" href="../../pyapikey.html#pyapikey.core.TempStore.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
@@ -60,7 +74,7 @@
 <div class="viewcode-block" id="TempStore.save"><a class="viewcode-back" href="../../pyapikey.html#pyapikey.core.TempStore.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/.config/pyapikey.temp.json&quot;</span><span class="p">)</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_handle</span><span class="p">:</span>
-            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">file_handle</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span></div></div>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">fp</span><span class="o">=</span><span class="n">file_handle</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">default</span><span class="p">)</span></div></div>
 </pre></div>
 
           </div>
