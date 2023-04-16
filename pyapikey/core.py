@@ -1,4 +1,5 @@
 import os
+import os.path
 from typing import Any
 import datetime
 import json
@@ -44,5 +45,6 @@ class TempStore:
 
     def save(self):
         filename = os.path.expanduser("~/.config/pyapikey.temp.json")
+        os.makedirs(os.path.dirname(filename))
         with open(filename, 'w') as file_handle:
             json.dump(fp=file_handle, obj=self.data, default=default, indent=4)
