@@ -1,5 +1,7 @@
-Welcome to pyapikey's documentation!
-====================================
+Welcome to |project|'s documentation!
+=====================================================
+
+:Version: |version|
 
 .. toctree::
    :maxdepth: 2
