@@ -2,11 +2,12 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.coverage',
               'sphinx.ext.viewcode']
 
-
 import config.project
 project = config.project.name
-project_copyright = '2020, Mark Veltzer'
-author = 'Mark Veltzer'
+import config.personal
+author = config.personal.fullname
+# FIXME
+project_copyright = author
 import config.version
 version = ".".join(str(x) for x in config.version.tup)
 release = ".".join(str(x) for x in config.version.tup)
