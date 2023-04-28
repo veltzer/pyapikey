@@ -7,8 +7,6 @@ Welcome to pyapikey's documentation!
 
    modules
 
-
-
 Indices and tables
 ==================
 
