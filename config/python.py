@@ -1,9 +1,10 @@
-dev_requires = [
-    "pypitools",
-]
 config_requires = [
     "pyclassifiers",
 ]
+dev_requires = [
+    "pypitools",
+]
+install_requires = []
 make_requires = [
     "pymakehelper",
     "pydmt",
@@ -16,3 +17,4 @@ test_requires = [
     "flake8",
     "mypy",
 ]
+requires = config_requires + install_requires + make_requires + test_requires
