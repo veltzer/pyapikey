@@ -16,6 +16,3 @@ test_requires = [
     "flake8",
     "mypy",
 ]
-# install_requires = [
-#     "json-datetime",
-# ]
