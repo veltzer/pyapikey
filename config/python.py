@@ -2,7 +2,6 @@ from typing import List
 
 
 dev_requires: List[str] = [
-    "pymultigit",
     "pypitools",
     "black",
 ]
