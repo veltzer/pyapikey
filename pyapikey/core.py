@@ -1,3 +1,7 @@
+"""
+core of the package
+"""
+
 import os
 import os.path
 import subprocess
