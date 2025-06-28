@@ -12,5 +12,6 @@ test_requires: list[str] = [
     "pytest",
     "pytest-cov",
     "mypy",
+    "ruff",
 ]
 requires = config_requires + build_requires + test_requires
