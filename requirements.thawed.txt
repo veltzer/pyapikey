@@ -1,9 +1,9 @@
 # THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
+mypy
 pyclassifiers
 pydmt
-pymakehelper
 pylint
+pymakehelper
 pytest
 pytest-cov
-mypy
 ruff
