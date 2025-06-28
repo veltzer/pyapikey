@@ -12,7 +12,7 @@ import json
 
 def old_get_key(domain: str) -> str:
     filename = os.path.expanduser("~/.config/pyapikey.json")
-    with open(filename, "rt") as file_handle:
+    with open(filename) as file_handle:
         keys = json.load(file_handle)
         return keys[domain]
 
@@ -75,5 +75,5 @@ class TempStore:
         dirname = os.path.dirname(TempStore.FILENAME)
         if not os.path.isdir(dirname):
             os.makedirs(dirname)
-        with open(TempStore.FILENAME, "wt") as file_handle:
+        with open(TempStore.FILENAME, "w") as file_handle:
             json.dump(fp=file_handle, obj=self.data, default=default, indent=4)
