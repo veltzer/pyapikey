@@ -4,8 +4,10 @@ config_requires: list[str] = [
     "pyclassifiers",
 ]
 build_requires: list[str] = [
-    "pydmt",
+    "hatch",
     "pymakehelper",
+    "pycmdtools",
+    "pydmt",
 ]
 test_requires: list[str] = [
     "pylint",
