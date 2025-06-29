@@ -14,7 +14,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="src" href="modules.html" />
+    <link rel="prev" title="pyapikey" href="modules.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -37,14 +37,77 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="pyapikey-core-module">
-<h2>pyapikey.core module<a class="headerlink" href="#pyapikey-core-module" title="Link to this heading">¶</a></h2>
+<section id="module-pyapikey.core">
+<span id="pyapikey-core-module"></span><h2>pyapikey.core module<a class="headerlink" href="#module-pyapikey.core" title="Link to this heading">¶</a></h2>
+<p>core of the package</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyapikey.core.TempStore">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyapikey.core.</span></span><span class="sig-name descname"><span class="pre">TempStore</span></span><a class="reference internal" href="_modules/pyapikey/core.html#TempStore"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.TempStore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyapikey.core.TempStore.FILENAME">
+<span class="sig-name descname"><span class="pre">FILENAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/mark/.config/pyapikey.temp.json'</span></em><a class="headerlink" href="#pyapikey.core.TempStore.FILENAME" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyapikey.core.TempStore.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="_modules/pyapikey/core.html#TempStore.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.TempStore.get" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyapikey.core.TempStore.has">
+<span class="sig-name descname"><span class="pre">has</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pyapikey/core.html#TempStore.has"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.TempStore.has" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyapikey.core.TempStore.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyapikey/core.html#TempStore.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.TempStore.save" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyapikey.core.TempStore.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/pyapikey/core.html#TempStore.set"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.TempStore.set" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyapikey.core.default">
+<span class="sig-prename descclassname"><span class="pre">pyapikey.core.</span></span><span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyapikey/core.html#default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.default" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyapikey.core.get_key">
+<span class="sig-prename descclassname"><span class="pre">pyapikey.core.</span></span><span class="sig-name descname"><span class="pre">get_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/pyapikey/core.html#get_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.get_key" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves a password from the pass password manager.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the password in the pass store.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The password stored at the given path.</p>
+</dd>
+<dt>Raises:</dt><dd><p>Exception: If an error occurs while running the pass command.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyapikey.core.object_hook">
+<span class="sig-prename descclassname"><span class="pre">pyapikey.core.</span></span><span class="sig-name descname"><span class="pre">object_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyapikey/core.html#object_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.object_hook" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyapikey.core.old_get_key">
+<span class="sig-prename descclassname"><span class="pre">pyapikey.core.</span></span><span class="sig-name descname"><span class="pre">old_get_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/pyapikey/core.html#old_get_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyapikey.core.old_get_key" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="pyapikey-static-module">
-<h2>pyapikey.static module<a class="headerlink" href="#pyapikey-static-module" title="Link to this heading">¶</a></h2>
+<section id="module-pyapikey.static">
+<span id="pyapikey-static-module"></span><h2>pyapikey.static module<a class="headerlink" href="#module-pyapikey.static" title="Link to this heading">¶</a></h2>
+<p>version which can be consumed from within the module</p>
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<section id="module-pyapikey">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyapikey" title="Link to this heading">¶</a></h2>
+<p>initalizing of the pyapikey package</p>
 </section>
 </section>
 
@@ -76,7 +139,7 @@
 <script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pyapikey</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pyapikey package</a></li>
 </ul>
 </li>
@@ -86,8 +149,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">src</a><ul>
-      <li>Previous: <a href="modules.html" title="previous chapter">src</a></li>
+  <li><a href="modules.html">pyapikey</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">pyapikey</a></li>
   </ul></li>
   </ul></li>
 </ul>
