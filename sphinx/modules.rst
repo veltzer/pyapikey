@@ -1,5 +1,5 @@
-src
-===
+pyapikey
+========
 
 .. toctree::
    :maxdepth: 4
