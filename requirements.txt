@@ -52,9 +52,10 @@ pexpect==4.9.0
 platformdirs==4.3.8
 pluggy==1.6.0
 ptyprocess==0.7.0
+pyclassifiers==0.0.20
 pycmdtools==0.0.85
 pycparser==2.22
-pydmt==0.3.24
+pydmt==0.3.25
 pyfakeuse==0.0.9
 Pygments==2.19.2
 pylint==3.3.7
