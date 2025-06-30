@@ -1,6 +1,7 @@
 # THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
 hatch
 mypy
+pyclassifiers
 pycmdtools
 pydmt
 pylint
