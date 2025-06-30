@@ -32,6 +32,8 @@ classifiers = [
     "Topic :: Utilities",
     "License :: OSI Approved :: MIT License",
 ]
+dependencies = [
+]
 
 [project.urls]
 "Homepage" = "https://github.com/veltzer/pyapikey"
