@@ -41,12 +41,12 @@ def get_key(path: str) -> str:
 
 def default(obj):
     if isinstance(obj, datetime.datetime):
-        return {'_isoformat': obj.isoformat()}
+        return {"_isoformat": obj.isoformat()}
     return str(obj)
 
 
 def object_hook(obj):
-    _isoformat = obj.get('_isoformat')
+    _isoformat = obj.get("_isoformat")
     if _isoformat is not None:
         return datetime.datetime.fromisoformat(_isoformat)
     return obj
