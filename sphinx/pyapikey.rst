@@ -9,21 +9,21 @@ pyapikey.core module
 
 .. automodule:: pyapikey.core
    :members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
 
 pyapikey.static module
 ----------------------
 
 .. automodule:: pyapikey.static
    :members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
 
 Module contents
 ---------------
 
 .. automodule:: pyapikey
    :members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
