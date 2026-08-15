@@ -2,12 +2,12 @@
 core of the package
 """
 
+import datetime
+import json
 import os
 import os.path
 import subprocess
 from typing import Any
-import datetime
-import json
 
 
 def old_get_key(domain: str) -> str:
