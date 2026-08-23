@@ -6,3 +6,4 @@ KEYWORDS = {
     "python",
     "secret",
 }
+PYPI = true
