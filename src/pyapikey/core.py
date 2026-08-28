@@ -13,7 +13,7 @@ from typing import Any
 def old_get_key(domain: str) -> str:
     filename = os.path.expanduser("~/.config/pyapikey.json")
     with open(filename) as file_handle:
-        keys = json.load(file_handle)
+        keys: dict[str, str] = json.load(file_handle)
         return keys[domain]
 
 
