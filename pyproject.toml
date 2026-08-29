@@ -35,6 +35,14 @@ classifiers = [
 dependencies = [
 ]
 
+[dependency-groups]
+dev = [
+    "mypy",
+    "pylint",
+    "pytest",
+    "ruff",
+]
+
 [project.urls]
 "Homepage" = "https://github.com/veltzer/pyapikey"
 "Bug Tracker" = "https://github.com/veltzer/pyapikey/issues"
