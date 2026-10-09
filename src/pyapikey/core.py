@@ -55,7 +55,8 @@ def object_hook(obj):
 class TempStore:
     FILENAME = os.path.expanduser("~/.config/pyapikey.temp.json")
 
-    def __init__(self):
+    def __init__(self) -> None:
+        self.data: dict[str, Any]
         if os.path.isfile(TempStore.FILENAME):
             with open(TempStore.FILENAME) as file_handle:
                 self.data = json.load(file_handle, object_hook=object_hook)
