@@ -5,7 +5,7 @@
 
 description: access api keys from code
 
-project website: https://veltzer.github.io/pyapikey
+project website: <https://veltzer.github.io/pyapikey>
 
 author: Mark Veltzer
 
