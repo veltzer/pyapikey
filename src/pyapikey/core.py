@@ -2,7 +2,7 @@
 core of the package
 """
 
-import datetime
+import datetime as dt
 import json
 import os
 import os.path
@@ -40,7 +40,7 @@ def get_key(path: str) -> str:
 
 
 def default(obj):
-    if isinstance(obj, datetime.datetime):
+    if isinstance(obj, dt.datetime):
         return {"_isoformat": obj.isoformat()}
     return str(obj)
 
@@ -48,7 +48,7 @@ def default(obj):
 def object_hook(obj):
     _isoformat = obj.get("_isoformat")
     if _isoformat is not None:
-        return datetime.datetime.fromisoformat(_isoformat)
+        return dt.datetime.fromisoformat(_isoformat)
     return obj
 
 
