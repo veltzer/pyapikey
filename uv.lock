@@ -278,7 +278,7 @@ wheels = [
 
 [[package]]
 name = "pyapikey"
-version = "0.0.13"
+version = "0.0.14"
 source = { editable = "." }
 
 [package.dev-dependencies]

@@ -9,7 +9,7 @@ project website: <https://veltzer.github.io/pyapikey>
 
 author: Mark Veltzer
 
-version: 0.0.13
+version: 0.0.14
 
 ## github
 
