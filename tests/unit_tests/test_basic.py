@@ -7,5 +7,5 @@ import unittest
 
 
 class TestBasic(unittest.TestCase):
-    def test_hello(self):
+    def test_hello(self) -> None:
         pass

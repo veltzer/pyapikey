@@ -39,13 +39,13 @@ def get_key(path: str) -> str:
     raise ValueError(f"Error retrieving password: {error.decode()}")
 
 
-def default(obj):
+def default(obj: object) -> dict[str, str] | str:
     if isinstance(obj, dt.datetime):
         return {"_isoformat": obj.isoformat()}
     return str(obj)
 
 
-def object_hook(obj):
+def object_hook(obj: dict[str, Any]) -> dict[str, Any] | dt.datetime:
     _isoformat = obj.get("_isoformat")
     if _isoformat is not None:
         return dt.datetime.fromisoformat(_isoformat)
@@ -72,7 +72,7 @@ class TempStore:
     def has(self, key: str) -> bool:
         return key in self.data
 
-    def save(self):
+    def save(self) -> None:
         dirname = os.path.dirname(TempStore.FILENAME)
         if not os.path.isdir(dirname):
             os.makedirs(dirname)
